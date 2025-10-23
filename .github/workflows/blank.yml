@@ -9,6 +9,12 @@ jobs:
   call-api:
     runs-on: ubuntu-latest
     steps:
-      - name: Call API
+      - name: Call APIs
         run: |
-          curl -X GET "https://user-management-api-oia5.onrender.com"
+          set -e  # stop on first error
+          echo "Calling User Management API..."
+          curl -f -X GET "https://user-management-api-oia5.onrender.com"
+          
+          echo "Calling S3 Connector API..."
+          curl -f -X GET "https://s3-connector-backend.onrender.com"
+
