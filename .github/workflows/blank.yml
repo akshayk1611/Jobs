@@ -13,7 +13,7 @@ jobs:
         run: |
           set -e  # stop on first error
           echo "Calling User Management API..."
-          curl -f -X GET "https://user-management-api-oia5.onrender.com"
+          curl -f -X GET "https://user-management-api-oia5.onrender.com/api/health"
           
           echo "Calling S3 Connector API..."
           curl -f -X GET "https://s3-connector-backend.onrender.com/api/health"
