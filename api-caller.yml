@@ -17,3 +17,6 @@ jobs:
           
           echo "Calling S3 Connector API..."
           curl -f -X GET "https://s3-connector-backend.onrender.com/api/health"
+
+          echo "Calling Vendor Setup API..."
+          curl -f -X GET "https://vendor-setup-backend.onrender.com/api/health"
