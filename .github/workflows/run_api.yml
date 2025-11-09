@@ -20,3 +20,6 @@ jobs:
 
           echo "Calling Vendor Setup API..."
           curl -f -X GET "https://vendor-setup-backend.onrender.com/api/health"
+
+          echo "Calling Connectors V2 API..."
+          curl -f -X GET "https://connectors-v2-backend.onrender.com/api/health"
